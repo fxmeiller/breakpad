@@ -96,6 +96,9 @@ class ExceptionHandler {
 
   ~ExceptionHandler();
 
+  // Get the full path to the next minidump to be written, including extension
+  string next_minidump_path() const { return next_minidump_path_; }
+
   // Get and set the minidump path.
   string dump_path() const { return dump_path_; }
   void set_dump_path(const string& dump_path) {
